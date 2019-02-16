@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Header from '../Header';
 
 const app = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const app = () => (
 
 const home = () => (
   <div>
+    <Header />
     <h2>Home</h2>
     <p>Welcome to ようこそ</p>
   </div>
