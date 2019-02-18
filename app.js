@@ -2,9 +2,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const expressGraphQL = require('express-graphql');
+var { buildSchema } = require('graphql');
+var mongoose = require('mongoose');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const schema = require('./schema/schema');
 
 var app = express();
 
@@ -14,8 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('*', (req,res) =>{
-  res.sendFile(path.join(__dirname+'/public/index.html'));
-});
+app.use('/graphql', expressGraphQL({
+  schema: schema,
+  graphiql: true
+}));
 
 module.exports = app;
