@@ -17,4 +17,7 @@ module.exports = {
   "testPathIgnorePatterns": [
     "<rootDir>/__tests__/setupTests.ts"
   ],
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ]
 }
