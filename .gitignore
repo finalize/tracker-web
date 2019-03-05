@@ -62,6 +62,5 @@ typings/
 
 .DS_Store
 
-__snapshots__/
 public/javascripts/bundle.js
 public/javascripts/bundle.js.map
