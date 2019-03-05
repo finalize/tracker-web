@@ -28508,12 +28508,16 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var styled_components_1 = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-var HeaderComponent = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: 100%;\n  height: 64px;\n  background-color: #333;\n"], ["\n  width: 100%;\n  height: 64px;\n  background-color: #333;\n"])));
+var HeaderComponent = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: 100%;\n  height: 64px;\n  background-color: #222;\n"], ["\n  width: 100%;\n  height: 64px;\n  background-color: #222;\n"])));
+var InnerHeaderComponent = styled_components_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 880px;\n  height: 64px;\n  margin: 0 auto;\n  text-align: center;\n"], ["\n  width: 880px;\n  height: 64px;\n  margin: 0 auto;\n  text-align: center;\n"])));
+var Title = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  color: #fafafa;\n  font-size: 36px;\n  font-family: 'Great Vibes', cursive;\n  padding-top: 14px\n"], ["\n  color: #fafafa;\n  font-size: 36px;\n  font-family: 'Great Vibes', cursive;\n  padding-top: 14px\n"])));
 var Header = function () {
-    return (React.createElement(HeaderComponent, null));
+    return (React.createElement(HeaderComponent, null,
+        React.createElement(InnerHeaderComponent, null,
+            React.createElement(Title, null, "Tracker"))));
 };
 exports.default = Header;
-var templateObject_1;
+var templateObject_1, templateObject_2, templateObject_3;
 
 
 /***/ }),
